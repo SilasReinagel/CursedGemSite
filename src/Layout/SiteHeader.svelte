@@ -21,11 +21,10 @@
   </nav>
   <SiteSidebar bind:open={sidebarOpen}/>
   <nav class="navbar-right tablet-hidden">
-    {#each pages as page}
+    {#each pages.filter(p => !!p.showInMainNav) as page}
       <a class="navlink decor-font" href={page.href}>{page.name}</a>
     {/each}
     {#if company.social.twitter}
-      
       <a class="twitter-link" href={company.social.twitter}>
         <img src="/social/twitter-multi-color.png" alt="Twitter Icon"/>
       </a>
@@ -72,7 +71,7 @@
 
   a img {
     margin-right: 0.5em;
-    height: 38px;
+    width: 38px;
 
     filter: invert(1);
   }

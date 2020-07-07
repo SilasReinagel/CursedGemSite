@@ -13,7 +13,7 @@
       <a href="." class="home"><h1>{company.name}</h1></a>
       <HamburgerIcon bind:open/>
     </div>
-    {#each pages as page}
+    {#each pages.filter(p => !!p.showInMainNav) as page}
       <a class="navlink" href={page.href}>{page.name}</a>
     {/each}
   </nav>
