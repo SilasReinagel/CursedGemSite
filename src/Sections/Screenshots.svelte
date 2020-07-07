@@ -27,9 +27,4 @@
     max-width: 42vw;
     margin: 2em 0em;
   }
-
-  .darken {
-    width: 100%;
-    background-image: linear-gradient(rgba(23, 17, 26, 0.9), rgba(23, 17, 26, 0.9)); 
-  }
 </style>

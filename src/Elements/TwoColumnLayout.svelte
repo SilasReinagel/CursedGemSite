@@ -25,7 +25,7 @@
 
   .column {
     max-width: 80vw;
-    width: 600px;
+    width: 36vw;
     display: flex;
     flex-direction: column;
     margin: 0px 2em;

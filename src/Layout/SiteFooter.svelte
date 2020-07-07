@@ -6,8 +6,8 @@
   const year = new Date().getFullYear();
 </script>
 
-<footer>
-  <p>© {year} {company.name}</p>
+<footer class="darken">
+  <p>© {year} {company.siteOwner}</p>
 
   <SingleColorSocialLinks/>
 
@@ -23,7 +23,6 @@
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    background-color: #000;
   }
 
   a {

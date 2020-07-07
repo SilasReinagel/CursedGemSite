@@ -62,6 +62,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* End Site Theme */
 
+.darken {
+  width: 100%;
+  background-image: linear-gradient(rgba(23, 17, 26, 0.9), rgba(23, 17, 26, 0.9));
+}
+
 .center-vh {
   display: flex;
   align-content: center;

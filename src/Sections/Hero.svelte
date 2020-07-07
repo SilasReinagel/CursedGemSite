@@ -10,19 +10,7 @@
 
 <style>
   .hero {
-    min-height: 100vh;
-  }
-
-  .hero-image {
-    background-color: #101818;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/background.png");
-
-    min-height: 80vh;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    min-height: 92vh;
   }
 
   .hero-text {
@@ -40,10 +28,7 @@
 
   .logo-box {
     margin: 2em;
-    left: 7.5%;
-    right: 7.5%;
-    top: 0%;
-    bottom: 15%;
+    width: 800px;
   }
 
   h1 {
