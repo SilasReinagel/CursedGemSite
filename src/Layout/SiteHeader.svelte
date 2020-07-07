@@ -8,13 +8,28 @@
   import { pages } from '../pages.js';
 </script>
 
-<header class="bg-gradient">
-  <a href="." class="home"><h1>{company.name}</h1></a>
+<header class="">
+  <nav class="navbar-left">
+    <a class="steam-link" href={company.social.steam}>
+      <img src="/social/steam.svg" alt="Steam Icon"/>
+      Steam
+    </a>
+    <a class="itch-link" href={company.social.itch}>
+      <img src="/social/itchio.svg" alt="Itch Icon"/>
+      itch.io
+    </a>
+  </nav>
   <SiteSidebar bind:open={sidebarOpen}/>
-  <nav class="navbar tablet-hidden">
+  <nav class="navbar-right tablet-hidden">
     {#each pages as page}
-      <a class="navlink" href={page.href}>{page.name}</a>
+      <a class="navlink decor-font" href={page.href}>{page.name}</a>
     {/each}
+    {#if company.social.twitter}
+      
+      <a class="twitter-link" href={company.social.twitter}>
+        <img src="/social/twitter-multi-color.png" alt="Twitter Icon"/>
+      </a>
+    {/if}
   </nav>
   <HamburgerIcon bind:open={sidebarOpen}/>
 </header>
@@ -27,9 +42,39 @@
     align-items: center;
     align-content: center;
     box-sizing: content-box;
-    border-bottom: 2px var(--secondary-color) solid;
-    height: 90px;
-    padding: 0 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 60px;
+    z-index: 1;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  a {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    height: 60px;
+    color: var(--primary-color);
+    padding: 0 1em;
+  }
+
+  a:hover {
+    background-color: #355574;
+  }
+
+  a:active {
+    background-color: #78b8f3;
+  }
+
+  a img {
+    margin-right: 0.5em;
+    height: 38px;
+
+    filter: invert(1);
   }
 
   .home {
@@ -41,16 +86,10 @@
     margin: 10px;
   }
 
-  img {
-    max-width: 64px;
-    border-radius: 16px;
-  }
- 
   .navlink {
     color: var(--primary-color);
-    padding: 6px;
-    margin: 5px 15px;
-    font-size: 1.1em;
+    padding: 0 1.2em;
+    font-size: 1.2em;
     line-height: 22px;
     font-weight: 500;
     letter-spacing: 1.5px;
@@ -59,11 +98,16 @@
     text-align: center;
   }
 
-  .navlink:hover,
-  .navlink:active {
-    border-top: 2px solid var(--primary-color); 
-    border-bottom: 2px solid var(--primary-color); 
-    color: var(--primary-color-hover);
+  .twitter-link img {
+    filter: none;
+  }
+
+  .twitter-link:hover {
+    background-color: #343434;
+  }
+
+  .twitter-link:active {
+    background-color: #565656;
   }
 
 </style>

@@ -2,13 +2,17 @@
   import company from '../static-content.js';
 </script>
 
- <div class="hero-image">
+ <div class="center-vh hero">
   <div class="logo-box">
     <img src="/images/logo.jpg" alt="Cursed Gem Logo"/>
   </div>
 </div>
 
 <style>
+  .hero {
+    min-height: 100vh;
+  }
+
   .hero-image {
     background-color: #101818;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/background.png");
@@ -19,13 +23,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-
-    display: flex;
-    align-content: center;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-  }
+  } 
 
   .hero-text {
     text-align: center;

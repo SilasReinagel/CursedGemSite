@@ -3,7 +3,7 @@
 </script>
 
 <Container>
-  <div class="center-vh py-4">
+  <div class="center-vh py-4 darken-gradient">
     <div class="main-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/NiLP_9t0hVQ" 
         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen 
@@ -16,6 +16,10 @@
 <style>
   .py-4 {
     padding: 4em 0;
+  }
+
+  .darken-gradient {
+    background-image: linear-gradient(rgba(23, 17, 26, 0), rgba(23, 17, 26, 0.9)); 
   }
   
   .main-video {
