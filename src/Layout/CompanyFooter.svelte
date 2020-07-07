@@ -18,7 +18,7 @@
     </div>
     <div class="column">
       <div class="row my-1">
-        <b><a href=".">Presskit</a> / <a href="./index.html?page=contentcreators">Let's Players</a> / <a href={company.devLog}>DevLog</a></b>
+        <b><a href="./index.html?page=presskit">Presskit</a> / <a href="./index.html?page=contentcreators">Let's Players</a> / <a href={company.devLog}>DevLog</a></b>
       </div>
       <a href={company.social.twitter}>@AikonCWD</a>
       <a href={`mailto:${company.email}`}>{company.email}</a>
