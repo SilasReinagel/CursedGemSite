@@ -4,7 +4,7 @@
 
  <div class="center-vh hero">
   <div class="logo-box">
-    <img src="/images/logo.jpg" alt="Cursed Gem Logo"/>
+    <img src={company.logo} alt="Cursed Gem Logo"/>
   </div>
 </div>
 
@@ -23,7 +23,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-  } 
+  }
 
   .hero-text {
     text-align: center;
@@ -39,6 +39,7 @@
   }
 
   .logo-box {
+    margin: 2em;
     left: 7.5%;
     right: 7.5%;
     top: 0%;

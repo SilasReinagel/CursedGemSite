@@ -6,7 +6,7 @@ export default ({
   slogan: 'Challenging retro-pixel platformer!',
   email: '',
   defaultBanner: './images/banner.jpg',
-  logo: './images/logo.jpg',
+  logo: './images/logo.png',
   address: null,
   contactPrompt: 'Want to setup an interview?<br>Got feedback on my game?<br>Send me a message',
   social: {
