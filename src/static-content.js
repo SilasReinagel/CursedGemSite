@@ -18,14 +18,12 @@ const site = ({
     itch: 'https://aikoncwd.itch.io',
   },
   screenshots: [
+    '/images/gif1.gif',
+    '/images/gif2.gif',
+    '/images/gif3.gif',
+    '/images/gif4.gif',
     '/images/screen-01.jpg',
-    '/images/screen-02.jpg',
-    '/images/screen-03.jpg',
-    '/images/screen-04.jpg',
-    '/images/screen-05.jpg',
-    '/images/screen-06.jpg',
-    '/images/screen-07.jpg',
-    '/images/screen-02.jpg',
+    '/images/screen-02.jpg'
   ]
 });
 

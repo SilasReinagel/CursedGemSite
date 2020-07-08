@@ -1,5 +1,5 @@
 <script>
-  export let id;
+  export let id = "";
 </script>
 
 <div {id}>

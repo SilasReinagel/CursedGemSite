@@ -1,10 +1,10 @@
 <script>
-  import TwoColumnLayout from '../Elements/TwoColumnLayout.svelte';
+  import TwoColumnLayout from '../Elements/TwoColumnMobileLayout.svelte';
 
   import project from '../static-content';
 
-  const leftImgs = project.screenshots.filter((_,i) => i&1);
-  const rightImgs = project.screenshots.filter((_,i) => i % 2 === 0);
+  const rightImgs = project.screenshots.filter((_,i) => i&1);
+  const leftImgs = project.screenshots.filter((_,i) => i % 2 === 0);
 </script>
 
 <section class="screenshots darken">
