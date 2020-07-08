@@ -4,29 +4,18 @@
 
 </script>
 
-<div class="darken-gradient">
-  <Container>
-      <div class="center-vh py-4">
-        <h1>Game Trailer</h1>
-        <div class="main-video">
-          <PlyrMp4Video src="/video/Trailer.mp4" srcType="video/mp4" title="Cursed Gem - Trailer"/>
-        </div>
+<Container>
+    <div class="center-vh py2">
+      <h1>Game Trailer</h1>
+      <div class="main-video">
+        <PlyrMp4Video src="/video/Trailer.mp4" srcType="video/mp4" title="Cursed Gem - Trailer"/>
       </div>
-  </Container>
-</div>
+    </div>
+</Container>
 
 <style>
   h1 {
     font-size: 2.4em;
-  }
-
-  .py-4 {
-    padding: 4em 0;
-  }
-
-  .darken-gradient {
-    background-image: linear-gradient(rgba(23, 17, 26, 0.01) 0%, rgba(23, 17, 26, 0.6) 33%, rgba(23, 17, 26, 0.9) 100%);
-    width: 100%;
   }
 
   .main-video {

@@ -1,12 +1,18 @@
 <script>
   import Container from '../Elements/Container.svelte';
-</script>
+  import DividerWithText from '../Elements/DividerWithText.svelte';
 
+  import { gameDetails } from '../static-content.js';
+</script>
 
 <section>
   <Container>
-    <div class="game-description decor-font">
-      Help Oliver in this retro-pixel and challenging platformer. Explore a cursed cave, full of traps, secrets and diamonds. Complete all levels, get the biggest diamond for your girlfriend and break the curse that is dooming you. 
+    <div class="game-description decor-font">{gameDetails.shortDescription}</div>
+    <div class="features center">
+      <DividerWithText text="Features"/>
+      {#each gameDetails.features as feature}
+  ​     <h3>● {feature}</h3>
+      {/each}
     </div>
   </Container>
 </section>
@@ -19,5 +25,14 @@
     font-size: 1.8em;
     text-align: center;
   }
-</style>
 
+  .features {
+    max-width: 76vw;
+    width: 40em;
+  }
+
+  h3 {
+    font-size: 1em;
+    margin: 0 0;
+  }
+</style>

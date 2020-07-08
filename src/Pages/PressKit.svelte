@@ -1,12 +1,14 @@
 <script>
   import Container from '../Elements/Container.svelte';
+  import Screenshots from '../Sections/Screenshots.svelte';
 
   import { presskit } from '../static-content.js';
 </script>
 
 <section role="main">
   <Container>
-  <div class="column mt4 px1 press">
+
+  <div class="column mt4 px1 press center">
     <h1 class="center">{presskit.name} Press Kit</h1>
 
     <div class="presskit-section facts">
@@ -50,19 +52,13 @@
       {/each}
     </div>
 
-    <!-- <div class="screenshots">
+    <div class="screenshots">
       <hr>
       <h3>Screenshots</h3>
       <hr>
-      <div class="row">
-        <div class="column half-width mr2">
-          <a href="/images/screenshots/b-screenshot-3.jpg"><img src="/images/screenshots/b-screenshot-3.jpg" /></a>
-        </div>
-        <div class="column half-width">
-          <a href="/images/screenshots/b-screenshot-8.jpg"><img src="/images/screenshots/b-screenshot-8.jpg" /></a>
-        </div>
-      </div>
-    </div>     -->
+
+      <Screenshots/>
+    </div>
 
     <div class="presskit-section credits">
       <hr>
@@ -92,6 +88,11 @@
     background-image: linear-gradient(rgba(23, 17, 26, 0.01) 0%, rgba(23, 17, 26, 0.9) 100%);
   }
 
+  .press {
+    width: 80vw;
+    max-width: 900px;
+  }
+
   .logo-box {
     width: 36em;
     max-width: 80vw;
@@ -106,6 +107,10 @@
     margin-top: -1em;
   }
 
+  .product p {
+    margin-top: -1em;
+  }
+
   p {
     margin: 0.5em 0px;;
     line-height: 1.4em;
@@ -113,6 +118,10 @@
 
   a {
     font-size: 1em;
+  }
+
+  .screenshots {
+    background-image: rgba(23, 17, 26, 0.95);
   }
 
   .presskit-section {
