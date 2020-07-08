@@ -1,12 +1,19 @@
 <script>
 	import DefaultLayout from './Layout/DefaultLayout.svelte';
-	import Home from './Pages/Home.svelte';
-	import Router from './Routing/Router.svelte';
+	import { onDestroy } from 'svelte';
+  import { pages } from './pages.js';
+
+  const page = '/' + (new URLSearchParams(window.location.search).get('page') || '');
+  const matchingRoutes = pages.filter(r => r.path.toLocaleLowerCase() === (page).toLocaleLowerCase());
+	const component = matchingRoutes[0].component;
+	const pageName = matchingRoutes[0].name;
 </script>
 
 <main>
-	<DefaultLayout>
-		<Router />
+	<DefaultLayout {pageName}>
+		<div class="main-container">
+  		<svelte:component this={component} />
+		</div>
 	</DefaultLayout>
 </main>
 

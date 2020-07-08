@@ -1,4 +1,7 @@
 <script>
+  export let pageName;
+  console.log({pageName});
+
   import SiteHeader from './SiteHeader.svelte';
   import SiteFooter from './SiteFooter.svelte';
   import CompanyFooter from './CompanyFooter.svelte';
@@ -12,7 +15,7 @@
   }
 </style>
 
-<SiteHeader/>
+<SiteHeader {pageName}/>
 <section>
   <slot/>
 </section>

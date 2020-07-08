@@ -14,7 +14,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
   --alternate-background-color: #17111a;
   --alternate-color-light:#00dce8;
   --banner-color: #1a1e75;
-  --input-background-color: #1a1e75;
+  --input-background-color: #362438;
 }
 
 @font-face {
@@ -64,6 +64,11 @@ h1, h2, h3, h4, h5, h6 {
 .darken {
   width: 100%;
   background-image: linear-gradient(rgba(23, 17, 26, 0.9), rgba(23, 17, 26, 0.9));
+}
+
+.darken-gradient {
+  width: 100%;
+  background-image: linear-gradient(rgba(23, 17, 26, 0), rgba(23, 17, 26, 0.9));
 }
 
 .center {
@@ -123,13 +128,10 @@ img {
 
 /* Whitespace */
 
-.mt2 {
-  margin-top: 2em;
-}
-
-.mt4 {
-  margin-top: 4em;
-}
+.mt2 {  margin-top: 2em; }
+.mt4 { margin-top: 4em; }
+.mb1 { margin-bottom: 1em; }
+.mb2 { margin-bottom: 2em; }
 
 .px1 {
   padding-left: 0.5em;

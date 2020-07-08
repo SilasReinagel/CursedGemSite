@@ -19,12 +19,7 @@
 
   h2 {
     white-space: nowrap;
-  }
-
-  svg {
-    margin-right: 12px;
-    height: 3.0em;
-    width: 3.0em;
+    font-size: 2em;
   }
 
   .row {

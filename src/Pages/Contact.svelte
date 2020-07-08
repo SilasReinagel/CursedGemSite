@@ -1,60 +1,68 @@
 <script>
   import TwoColumnLayout from '../Elements/TwoColumnLayout.svelte';
-  import StandardPageLayout from '../Elements/StandardPageLayout.svelte';
+  import DividerWithText from '../Elements/DividerWithText.svelte';
+  import Container from '../Elements/Container.svelte';
 
   import company from '../static-content';
 </script>
 
-<StandardPageLayout title="Contact" headerImg="/images/banner.jpg" headerImgAlt="Cyberpunk Alley">
-  <TwoColumnLayout>
-    <form class="email-form" name="contact" form-name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" slot='second'>
-      <h2>Contact</h2>
-      <hr/>
-      <div hidden aria-hidden="true">
-        <label>
-          Don’t fill this out if you're human:
-          <input name="bot-field" />
-        </label>
-      </div>
-      <input type="hidden" name="form-name" value="contact" />
-      <input type="text" name="name" placeholder="Your Name"/>
-      <input type="email" name="email" placeholder="Your Email"/>
-      <textarea name="message" placeholder="Your Message"/>
-      <button type="submit">Send</button>
-    </form>
-    <div slot="first">
-      <p>{@html company.contactPrompt}</p>
-      <div class="row">
-        {#if company.address}
-        <div class="address">
-          <hr/>
-          <h3>Our Address</h3>
-          <p>{company.address.line1}<br>{company.address.city}, {company.address.state}, {company.address.zip5}</p>
+<section class="contact darken-gradient center-vh py2">
+  <Container>
+    <div class="logo-box center mb1"><img src={company.logo} alt="{company.name} Logo" /></div>
+    <DividerWithText text="Contact"/>
+    <TwoColumnLayout>
+      <form class="email-form" name="contact" form-name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" slot='second'>
+        <hr/>
+        <div hidden aria-hidden="true">
+          <label>
+            Don’t fill this out if you're human:
+            <input name="bot-field" />
+          </label>
         </div>
-        {/if}
-        {#if company.phone}
-        <div class="phone">
-          <hr/>
-          <h3>Our Phone</h3>
-          <p>{company.phone}</p>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="name" placeholder="Your Name"/>
+        <input type="email" name="email" placeholder="Your Email"/>
+        <textarea name="message" placeholder="Your Message"/>
+        <button type="submit">Send</button>
+      </form>
+      <div slot="first">
+        <p>{@html company.contactPrompt}</p>
+        <div class="row">
+          {#if company.address}
+          <div class="address">
+            <hr/>
+            <h3>Our Address</h3>
+            <p>{company.address.line1}<br>{company.address.city}, {company.address.state}, {company.address.zip5}</p>
+          </div>
+          {/if}
+          {#if company.phone}
+          <div class="phone">
+            <hr/>
+            <h3>Our Phone</h3>
+            <p>{company.phone}</p>
+          </div>
+          {/if}
         </div>
-        {/if}
-      </div>
 
-      {#if company.address && company.address.mapLink}
-      <a href={company.address.mapLink}><img src="/images/map.jpg" alt="Map showing Gold Bar Espresso Location"/></a>
-      {/if}
-    </div>
-  </TwoColumnLayout>
-</StandardPageLayout>
+        {#if company.address && company.address.mapLink}
+        <a href={company.address.mapLink}><img src="/images/map.jpg" alt="Map showing Gold Bar Espresso Location"/></a>
+        {/if}
+      </div>
+    </TwoColumnLayout>
+  </Container>
+</section>
 
 <style>
-  h2, h3 {
-    color: var(--alternate-color);
+  section {
+    min-height: 96vh;
+  }
+
+  .logo-box {
+    width: 320px;
+    min-height: 202px;
   }
 
   p {
-    color: var(--alternate-color-light);
     font-size: 1.1em;
     line-height: 1.6em;
   }
