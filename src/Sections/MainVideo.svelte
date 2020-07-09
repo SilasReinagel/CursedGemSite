@@ -8,7 +8,7 @@
     <div class="center-vh py2">
       <h1>Game Trailer</h1>
       <div class="main-video">
-        <PlyrMp4Video src="/video/Trailer.mp4" srcType="video/mp4" title="Cursed Gem - Trailer"/>
+        <PlyrMp4Video src="/video/Trailer.mp4" srcType="video/mp4" title="Cursed Gem - Trailer" poster="/video/trailer-poster.jpg"/>
       </div>
     </div>
 </Container>
