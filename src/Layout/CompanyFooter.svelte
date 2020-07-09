@@ -14,7 +14,7 @@
       </div>
       <div class="logo-box center-vh">
         <div class="logo">
-          <img src={company.publisherLogo} alt="Vega Games Logo"/>
+          <img src={company.publisherLogo} alt="Vega Games Logo" loading="lazy"/>
         </div>
       </div>
     </div>

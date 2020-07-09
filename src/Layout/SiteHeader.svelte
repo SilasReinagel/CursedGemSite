@@ -27,7 +27,7 @@
       <a class="navlink decor-font" href={page.href}>{page.name}</a>
     {/each}
     {#if company.social.twitter}
-      <a class="twitter-link" href={company.social.twitter}>
+      <a class="twitter-link mobile-hidden" href={company.social.twitter}>
         <img src="/social/twitter-multi-color.png" alt="Twitter Icon"/>
       </a>
     {/if}

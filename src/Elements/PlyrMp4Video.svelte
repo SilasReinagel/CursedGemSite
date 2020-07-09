@@ -15,7 +15,7 @@
 
 <svelte:head>
   <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
-  <script src="https://cdn.plyr.io/3.6.2/plyr.js" on:load={onScriptLoaded}></script>
+  <script src="https://cdn.plyr.io/3.6.2/plyr.js" on:load={onScriptLoaded} defer></script>
 </svelte:head>
 
 <video id="video-player" crossorigin playsinline controls data-poster={poster}>

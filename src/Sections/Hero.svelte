@@ -6,7 +6,7 @@
   <div class="logo-box">
     <picture>
       <source srcset={company.logoMobile} media="(max-width: 600px)">
-      <img src={company.logo} alt="{company.name} Logo">
+      <img src={company.logo} alt="{company.name} Logo" height="198" width="320">
     </picture>
   </div>
 </div>

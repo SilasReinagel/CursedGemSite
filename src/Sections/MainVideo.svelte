@@ -1,16 +1,19 @@
 <script>
   import Container from '../Elements/Container.svelte';
+  import Lazy from '../Elements/Lazy.svelte';
   import PlyrMp4Video from '../Elements/PlyrMp4Video.svelte';
 
 </script>
 
 <Container>
-  <div class="center-vh py2">
-    <h1>Game Trailer</h1>
-    <div class="main-video">
-      <PlyrMp4Video src="/video/Trailer.mp4" srcType="video/mp4" title="Cursed Gem - Trailer" poster="/video/trailer-poster.jpg"/>
+  <Lazy height={600}>
+    <div class="center-vh py2">
+      <h1>Game Trailer</h1>
+      <div class="main-video">
+        <PlyrMp4Video src="/video/Trailer.mp4" srcType="video/mp4" title="Cursed Gem - Trailer" poster="/video/trailer-poster.jpg"/>
+      </div>
     </div>
-  </div>
+  </Lazy>
 </Container>
 
 <style>
