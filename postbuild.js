@@ -1,5 +1,9 @@
+import site from './src/static-content';
+
 const fs = require("fs");
 const replace = require('replace-in-file');
+
+// Cache Busting
 
 const randomString = (len, charSet) => {
   charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -26,3 +30,24 @@ replace(options, (error, _) => {
     return console.error('Error:', error);
   }
 });
+
+// Twitter Card
+
+let twitterCard = "";
+twitterCard = twitterCard.concat(`  <meta name="twitter:card" content="summary_large_image" />`);
+twitterCard = twitterCard.concat(`  <meta name="twitter:creator" content="@${site.social.twitterUsername}" />`);
+twitterCard = twitterCard.concat(`  <meta name="twitter:site" content="@${site.social.twitterUsername}" />`);
+twitterCard = twitterCard.concat(`  <meta name="twitter:title" content="@${site.name}" />`);
+twitterCard = twitterCard.concat(`  <meta name="twitter:description" content="@${site.siteDescription}" />`);
+twitterCard = twitterCard.concat(`  <meta name="twitter:url" content="@${site.url}" />`);
+twitterCard = twitterCard.concat(`  <meta name="twitter:image" content="@${site.siteImage}" />`);
+
+replace({
+  files: './public/index.html',
+  from: '  <!-- Twitter Card Slot -->',
+  to: twitterCard,
+  }, (error, _) => {
+    if (error) {
+      return console.error('Error:', error);
+    }
+  });

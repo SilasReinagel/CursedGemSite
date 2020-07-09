@@ -1,6 +1,5 @@
 <script>
 	import DefaultLayout from './Layout/DefaultLayout.svelte';
-	import HeadMetadata from './Sections/HeadMetadata.svelte';
 	import { onDestroy } from 'svelte';
   import { pages } from './pages.js';
 
