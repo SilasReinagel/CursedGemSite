@@ -4,8 +4,8 @@
 
   import company from '../static-content';
 </script>
-   
-<div class={hideMobile ? "social-links mobile-hidden" : "social-link"}>  
+
+<div class={hideMobile ? "social-links mobile-hidden" : "social-link"}>
   {#if company.social.soundcloud}
   <a class="social-icon soundcloud-orange" href={company.social.soundcloud} target=”_blank”>
     <img src="/social/soundcloud.svg" alt="Soundcloud Icon" loading="lazy" style="width: {iconWidth}; height: auto;"/>
@@ -34,6 +34,11 @@
   {#if company.social.steam}
   <a class="social-icon steam-blue" href={company.social.steam} target=”_blank”>
     <img src="/social/steam.svg" alt="Steam Icon" loading="lazy" style="width: {iconWidth}; height: auto;"/>
+  </a>
+  {/if}
+  {#if company.social.itchio}
+  <a class="social-icon itch-orange" href={company.social.steam} target=”_blank”>
+    <img src="/social/itchio.svg" alt="Itch.io Icon" loading="lazy" style="width: {iconWidth}; height: auto;"/>
   </a>
   {/if}
 </div>
@@ -76,9 +81,13 @@
 
   .twitch-purple img:hover {
     filter: invert(33%) sepia(61%) saturate(4460%) hue-rotate(249deg) brightness(100%) contrast(101%);
-  }  
+  }
 
   .steam-blue img:hover {
     filter: invert(17%) sepia(61%) saturate(1771%) hue-rotate(189deg) brightness(98%) contrast(92%);
+  }
+
+  .itch-orange img:hover {
+    filter: invert(60%) sepia(49%) saturate(4330%) hue-rotate(324deg) brightness(99%) contrast(97%);
   }
 </style>

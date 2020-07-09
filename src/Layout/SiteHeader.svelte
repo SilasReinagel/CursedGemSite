@@ -16,7 +16,7 @@
       <img src="/social/steam.svg" alt="Steam Icon"/>
       Steam
     </a>
-    <a class="itch-link" href={company.social.itch}>
+    <a class="itch-link" href={company.social.itchio}>
       <img src="/social/itchio.svg" alt="Itch Icon"/>
       itch.io
     </a>

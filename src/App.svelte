@@ -11,9 +11,7 @@
 
 <main>
 	<DefaultLayout {pageName}>
-		<div class="main-container">
-  		<svelte:component this={component} />
-		</div>
+  	<svelte:component this={component} />
 	</DefaultLayout>
 </main>
 

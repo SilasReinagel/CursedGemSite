@@ -37,7 +37,7 @@ const site = ({
   social: {
     steam: 'https://store.steampowered.com/app/1194480/Cursed_Gem/',
     twitter: 'https://twitter.com/aikoncwd',
-    itch: 'https://aikoncwd.itch.io',
+    itchio: 'https://aikoncwd.itch.io',
   },
   screenshots: [
     '/images/gif1.gif',
