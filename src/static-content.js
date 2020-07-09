@@ -1,17 +1,15 @@
-const address = (line1, city, state, zip5, mapLink) => ({ line1, city, state, zip5, mapLink, toString: () => `${line1}, ${city}, ${state}, ${zip5}`});
-
 export const gameDetails = ({
   features: [
     "Single player adventure marked by powerful challenge, deadly traps and precision platforms.",
     "Explore and overcome a huge cave with more than 10 levels.",
-    "More than 80 rooms with different designs: traps, puzzles, puzzles, impossible jumps ...",
+    "More than 80 rooms with different designs: traps, puzzles, impossible jumps ...",
     "Different difficulty modes that change the behavior of checkpoints.",
     "A \"nightmare\" difficulty mode: Play the entire adventure in the dark, with only a light helmet.",
-    "Exchange messages on the walls with other players. In true Darksouls style",
-    "Decipher a cryptic runic language that you will find on the walls of the cave",
-    "12 skins to customize your player. Being one of them a well-known gentleman ...",
-    "55 achievements that will make you feel good about yourself",
-    "Soundtrack composed by Horror Pen & Shotte"
+    "Exchange messages on the walls with other players. In true Dark Souls style.",
+    "Decipher a cryptic runic language that you will find on the walls of the cave.",
+    "12 skins to customize your player. One of them being a well-known gentleman...",
+    "55 achievements that will make you feel good about yourself.",
+    "Soundtrack composed by Horror Pen & Shotte."
   ],
   shortDescription: 'Help Oliver in this retro-pixel and challenging platformer. Explore a cursed cave, full of traps, secrets and diamonds. Complete all levels, get the biggest diamond for your girlfriend and break the curse that is dooming you.',
   descriptionParagraphs: [
