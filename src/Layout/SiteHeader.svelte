@@ -13,11 +13,11 @@
 <header class="">
   <nav class="navbar-left">
     <a class="steam-link" href={company.social.steam}>
-      <img src="/social/steam.svg" alt="Steam Icon"/>
+      <img src="/social/steam.svg" alt="Steam Icon" width=38 height=38/>
       Steam
     </a>
     <a class="itch-link" href={company.social.itchio}>
-      <img src="/social/itchio.svg" alt="Itch Icon"/>
+      <img src="/social/itchio.svg" alt="Itch Icon" width=38 height=38/>
       itch.io
     </a>
   </nav>
@@ -29,6 +29,11 @@
     {#if company.social.twitter}
       <a class="twitter-link mobile-hidden" href={company.social.twitter}>
         <img src="/social/twitter-multi-color.png" alt="Twitter Icon"/>
+      </a>
+    {/if}
+    {#if company.social.reddit}
+      <a class="reddit-link mobile-hidden" href={company.social.reddit}>
+        <img src="/social/reddit-multi-color.png" alt="Reddit Icon"/>
       </a>
     {/if}
   </nav>
@@ -60,7 +65,7 @@
     align-items: center;
     height: 60px;
     color: var(--primary-color);
-    padding: 0 1em;
+    padding: 0 0.8em;
   }
 
   a:hover {
@@ -72,10 +77,13 @@
   }
 
   a img {
-    margin-right: 0.5em;
     width: 38px;
 
     filter: invert(1);
+  }
+
+  a img:last-of-type {
+    margin-right: 0.5em;
   }
 
   .home {
@@ -108,6 +116,18 @@
   }
 
   .twitter-link:active {
+    background-color: #565656;
+  }
+
+  .reddit-link img {
+    filter: none;
+  }
+
+  .reddit-link:hover {
+    background-color: #343434;
+  }
+
+  .reddit-link:active {
     background-color: #565656;
   }
 

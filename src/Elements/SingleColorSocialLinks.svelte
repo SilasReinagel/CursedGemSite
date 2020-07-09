@@ -26,6 +26,11 @@
     <img src="/social/twitter.svg" alt="Twitter Icon" loading="lazy" style="width: {iconWidth}; height: auto;"/>
   </a>
   {/if}
+  {#if company.social.reddit}
+  <a class="social-icon reddit-orange" href={company.social.reddit} target=”_blank”>
+    <img src="/social/reddit.svg" alt="Reddit Icon" loading="lazy" style="width: {iconWidth}; height: auto;"/>
+  </a>
+  {/if}
   {#if company.social.twitch}
   <a class="social-icon twitch-purple" href={company.social.twitch} target=”_blank”>
     <img src="/social/twitch.svg" alt="Twitch Icon" loading="lazy" style="width: {iconWidth}; height: auto;"/>
@@ -89,5 +94,9 @@
 
   .itch-orange img:hover {
     filter: invert(60%) sepia(49%) saturate(4330%) hue-rotate(324deg) brightness(99%) contrast(97%);
+  }
+
+  .reddit-orange img:hover {
+    filter: invert(34%) sepia(80%) saturate(4444%) hue-rotate(4deg) brightness(106%) contrast(102%);
   }
 </style>
