@@ -20,7 +20,7 @@
     flex-wrap: no-wrap;
     justify-content: space-evenly;
     margin: 0 0 0 0;
-    padding-bottom: 6em;
+    padding-bottom: 2em;
   }
 
   .column {

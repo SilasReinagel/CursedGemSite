@@ -3,6 +3,7 @@
 	import MainVideo from '../Sections/MainVideo.svelte';
 	import Description from '../Sections/Description.svelte';
 	import Screenshots from '../Sections/Screenshots.svelte';
+	import CallToAction from '../Sections/CallToAction.svelte';
 </script>
 
 <Hero/>
@@ -17,6 +18,10 @@
 
 <section class="screenshots darken pt4">
 	<Screenshots/>
+</section>
+
+<section class="call-to-action darken-break py8">
+	<CallToAction/>
 </section>
 
 <style>

@@ -77,6 +77,11 @@ h1, h2, h3, h4, h5, h6 {
   background-image: linear-gradient(rgba(23, 17, 26, 0), rgba(23, 17, 26, 0.9));
 }
 
+.darken-break {
+  width: 100%;
+  background-image: linear-gradient(rgba(23, 17, 26, 0.9) 0%, rgba(23, 17, 26, 0.01) 50%, rgba(23, 17, 26, 0.9) 100%);
+}
+
 .center {
   margin-left: auto;
   margin-right: auto;
@@ -139,13 +144,13 @@ img {
 .mb1 { margin-bottom: 1em; }
 .mb2 { margin-bottom: 2em; }
 
+.pt2 { padding-top: 2em; }
+.pt4 { padding-top: 4em; }
+.pb6 { padding-bottom: 6em; }
+
 .px1 {
   padding-left: 0.5em;
   padding-right: 0.5em
-}
-
-.pt4 {
-  padding-top: 4em;
 }
 
 .py4 {
@@ -156,6 +161,11 @@ img {
 .py2 {
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.py8 {
+  padding-top: 8em;
+  padding-bottom: 8em;
 }
 
 /* Responsive Utilities */
