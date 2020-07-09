@@ -1,5 +1,6 @@
 <script>
 	import DefaultLayout from './Layout/DefaultLayout.svelte';
+	import HeadMetadata from './Sections/HeadMetadata.svelte';
 	import { onDestroy } from 'svelte';
   import { pages } from './pages.js';
 
@@ -8,6 +9,8 @@
 	const component = matchingRoutes[0].component;
 	const pageName = matchingRoutes[0].name;
 </script>
+
+<HeadMetadata/>
 
 <main>
 	<DefaultLayout {pageName}>

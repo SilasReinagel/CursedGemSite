@@ -1,6 +1,5 @@
 <script>
   export let pageName;
-  console.log({pageName});
 
   import SiteHeader from './SiteHeader.svelte';
   import SiteFooter from './SiteFooter.svelte';
