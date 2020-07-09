@@ -30,6 +30,7 @@ const site = ({
   email: 'cursedgem.game@gmail.com',
   defaultBanner: './images/banner.jpg',
   logo: './images/logo.png',
+  logoMobile: './images/logo-small.png',
   publisherLogo: './images/vegagames-logo.png',
   address: null,
   contactPrompt: 'Want to setup an interview?<br>Got feedback on my game?<br>Send me a message',

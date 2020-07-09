@@ -4,7 +4,10 @@
 
  <div class="center-vh hero">
   <div class="logo-box">
-    <img src={company.logo} alt="Cursed Gem Logo"/>
+    <picture>
+      <source srcset={company.logoMobile} media="(max-width: 600px)">
+      <img src={company.logo} alt="{company.name} Logo">
+    </picture>
   </div>
 </div>
 
