@@ -16,5 +16,6 @@
   .logo-box {
     margin: 2em;
     width: 800px;
+    min-height: 198px;
   }
 </style>

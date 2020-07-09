@@ -12,8 +12,10 @@
         <a href={company.social.twitter}>AikonCWD</a>
         <a href="https://soundcloud.com/horrorpen">HorrorPen</a>
       </div>
-      <div class="logo">
-        <img src={company.publisherLogo} alt="Vega Games Logo"/>
+      <div class="logo-box center-vh">
+        <div class="logo">
+          <img src={company.publisherLogo} alt="Vega Games Logo"/>
+        </div>
       </div>
     </div>
     <div class="column">
@@ -37,11 +39,15 @@
     padding-bottom: 4em;
   }
 
+  .logo-box {
+    height: 277px;
+  }
+
   .logo {
-    margin-left: 2em;
+    margin-left: 2vw;
     margin-bottom: 3em;
     width: 240px;
-    max-width: 80vw;
+    max-width: 40vw;
   }
 
   .row {
