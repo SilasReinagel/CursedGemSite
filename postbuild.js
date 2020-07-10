@@ -20,9 +20,9 @@ twitterCard = twitterCard.concat(`\t<meta name="twitter:card" content="summary_l
 twitterCard = twitterCard.concat(`\t<meta name="twitter:creator" content="@${site.twitterUsername}" />\n`);
 twitterCard = twitterCard.concat(`\t<meta name="twitter:site" content="@${site.twitterUsername}" />\n`);
 twitterCard = twitterCard.concat(`\t<meta name="twitter:title" content="${site.name}" />\n`);
-twitterCard = twitterCard.concat(`\t<meta name="twitter:description" content="${site.siteDescription}" />\n`);
+twitterCard = twitterCard.concat(`\t<meta name="twitter:description" content="${site.description}" />\n`);
 twitterCard = twitterCard.concat(`\t<meta name="twitter:url" content="${site.url}" />\n`);
-twitterCard = twitterCard.concat(`\t<meta name="twitter:image" content="${site.siteImage}" />`);
+twitterCard = twitterCard.concat(`\t<meta name="twitter:image" content="${site.image}" />`);
 
 replaceFs('./public/index.html', '\t<!-- Twitter Card Slot -->', twitterCard);
 
@@ -31,7 +31,7 @@ replaceFs('./public/index.html', '\t<!-- Twitter Card Slot -->', twitterCard);
 let openGraph = "";
 openGraph = openGraph.concat(`\t<meta name="og:type" content="website" />\n`);
 openGraph = openGraph.concat(`\t<meta name="og:title" content="${site.title}" />\n`);
-openGraph = openGraph.concat(`\t<meta name="og:description" content="${site.siteDescription}" />\n`);
+openGraph = openGraph.concat(`\t<meta name="og:description" content="${site.description}" />\n`);
 openGraph = openGraph.concat(`\t<meta name="og:url" content="${site.url}" />\n`);
 openGraph = openGraph.concat(`\t<meta name="og:image" content="${site.image}" />\n`);
 
