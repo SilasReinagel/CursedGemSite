@@ -90,9 +90,9 @@
     text-transform: uppercase;
   }
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 600px) {
     a {
-      font-size: 0.8em;
+      font-size: 1em;
     }
   }
 </style>
