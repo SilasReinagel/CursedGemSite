@@ -85,9 +85,14 @@
   a img {
     max-width: 48px;
   }
-  
+
   h2 {
     text-transform: uppercase;
   }
 
+  @media screen and (max-width: 360px) {
+    a {
+      font-size: 1em;
+    }
+  }
 </style>
