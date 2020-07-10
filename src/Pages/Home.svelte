@@ -4,6 +4,7 @@
 	import Description from '../Sections/Description.svelte';
 	import Screenshots from '../Sections/Screenshots.svelte';
 	import CallToAction from '../Sections/CallToAction.svelte';
+	import GameOverview from '../Sections/GameOverview.svelte';
 </script>
 
 <Hero/>
@@ -16,8 +17,8 @@
 	<Description/>
 </section>
 
-<section class="screenshots darken pt4">
-	<Screenshots/>
+<section class="game-overview darken pt4">
+	<GameOverview/>
 </section>
 
 <section class="call-to-action darken-break py8">

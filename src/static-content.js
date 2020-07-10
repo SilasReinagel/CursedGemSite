@@ -45,6 +45,20 @@ const site = ({
     '/images/gif4.gif',
     '/images/screen-01.jpg',
     '/images/screen-02.jpg'
+  ],
+  gameDetailSections: [
+    { image: "/images/gif1.gif" },
+    { text: "Cursed Gem is a game about explore a cursed cave.<br><br>Collect diamonds, avoid traps and try to stay alive." },
+    { text: "To complete a level, just reach the door at the end.<br><br>Optional: Each level have 100 gems to be collected." },
+    { image: "/images/gif2.gif" },
+    { image: "/images/gif3.gif" },
+    { text: "There will be some puzzles to be solved.<br><br>Use keys, press buttons, play with mechanisms, and more..." },
+    { text: "Your ability and skill will be important to succeed in this adventure.<br><br>Don't worry if you fail... remember you can't die while cursed!" },
+    { image: "/images/gif4.gif" },
+    { image: "/images/gif5.gif" },
+    { text: "You will encounter numerous obstacles.<br><br>Sometimes, knowing the correct timing will be the key to success" },    
+    { image: "/images/gif6.gif" },  
+    { image: "/images/gif7.gif" },
   ]
 });
 
