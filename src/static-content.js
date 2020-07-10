@@ -22,9 +22,6 @@ export const gameDetails = ({
 
 const site = ({
   name: 'Cursed Gem',
-  url: 'https://cursedgemgame.netlify.app',
-  siteImage: 'https://cursedgemgame.netlify.app/video/trailer-poster.jpg',
-  siteDescription: 'Official Website for Cursed Gem game',
   siteOwner: 'Vega Games',
   owner: 'AikonCWD',
   slogan: 'Challenging retro-pixel platformer!',
@@ -38,7 +35,6 @@ const site = ({
   social: {
     steam: 'https://store.steampowered.com/app/1194480/Cursed_Gem/',
     twitter: 'https://twitter.com/aikoncwd',
-    twitterUsername: 'aikoncwd',
     itchio: 'https://aikoncwd.itch.io',
     reddit: 'https://t.co/O9g6nNvqCv?amp=1'
   },

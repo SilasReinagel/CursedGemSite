@@ -9,8 +9,6 @@
 	const pageName = matchingRoutes[0].name;
 </script>
 
-<HeadMetadata/>
-
 <main>
 	<DefaultLayout {pageName}>
   	<svelte:component this={component} />
