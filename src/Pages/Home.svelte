@@ -9,7 +9,7 @@
 
 <Hero/>
 
-<section class="video darken-gradient">
+<section class="video darken-gradient mt2">
 	<MainVideo/>
 </section>
 

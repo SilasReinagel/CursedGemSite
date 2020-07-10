@@ -13,7 +13,7 @@
 
 <style>
   .hero {
-    min-height: 92vh;
+    min-height: 100vh;
   }
 
   .logo-box {

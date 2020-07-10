@@ -1,6 +1,7 @@
 <script>
   import { fade } from 'svelte/transition';
 
+  export let name = '';
   export let height = 0;
   export let offset = 150;
   export let fadeOption = {
@@ -10,6 +11,7 @@
   export let resetHeightDelay = 0;
   export let onload = null;
   export let placeholder = null;
+  export let debug = false;
 
   let loaded = false;
 
@@ -21,6 +23,8 @@
       const expectedTop = getExpectedTop(e, offset);
 
       if (top <= expectedTop) {
+        if (debug && !loaded)
+          console.log(`Triggered Lazy Load - ${name} - Top: ${top} Expected Top: ${expectedTop}`);
         loaded = true;
         resetHeight(node);
         onload && onload(node);
@@ -116,6 +120,8 @@
     {:else}
       <slot>Lazy load content</slot>
     {/if}
+  {:else if !!placeholder}
+    <div style="height: {height}"/>
   {:else if typeof placeholder === 'string'}
     <div>{placeholder}</div>
   {:else if typeof placeholder === 'function'}

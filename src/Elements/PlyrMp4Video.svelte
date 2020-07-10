@@ -4,12 +4,11 @@
   export let srcType = 'video/mp4';
   export let title = '';
 
-  const onScriptLoaded = () => {
-    const player = new Plyr('#video-player', {
+  const onScriptLoaded = () => 
+    window.player = new Plyr('#video-player', {
       title: title,
       ratio: '16:9'
     });
-    window.player = player;  }
 
 </script>
 

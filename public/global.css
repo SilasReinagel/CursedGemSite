@@ -33,7 +33,7 @@ html {
   background-color: #101818;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/background-1500px.jpg");
 
-  background-position: center;
+  background-position: top;
   background-repeat: repeat-y;
   background-size: 100% auto;
 }

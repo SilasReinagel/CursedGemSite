@@ -21,7 +21,7 @@
       itch.io
     </a>
   </nav>
-  <SiteSidebar bind:open={sidebarOpen} {pageName}/>
+  <SiteSidebar bind:open={sidebarOpen} />
   <nav class="navbar-right tablet-hidden">
     {#each pages.filter(p => !!p.showInMainNav && (!pageName || p.name !== pageName)) as page}
       <a class="navlink decor-font" href={page.href}>{page.name}</a>

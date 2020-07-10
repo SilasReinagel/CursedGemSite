@@ -6,7 +6,7 @@
 </script>
 
 <Container>
-  <Lazy height={600}>
+  <Lazy height={697} offset={50} name="video">
     <div class="center-vh py2">
       <h1>Game Trailer</h1>
       <div class="main-video">
