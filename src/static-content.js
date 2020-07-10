@@ -48,7 +48,7 @@ const site = ({
   ],
   gameDetailSections: [
     { image: "/images/gif1.gif" },
-    { text: "Cursed Gem is a game about explore a cursed cave.<br><br>Collect diamonds, avoid traps and try to stay alive." },
+    { text: "Cursed Gem is a game about exploring a cursed cave.<br><br>Collect diamonds, avoid traps and try to stay alive." },
     { text: "To complete a level, just reach the door at the end.<br><br>Optional: Each level have 100 gems to be collected." },
     { image: "/images/gif2.gif" },
     { image: "/images/gif3.gif" },
@@ -68,7 +68,7 @@ export const presskit = ({
   name: site.name,
   developer: site.siteOwner,
   location: 'Barcelona, Spain',
-  releaseDate: 'Auguest 3rd, 2020',
+  releaseDate: 'August 3rd, 2020',
   platforms: 'PC',
   website: 'https://www.cursedgemgame.com',
   contact: site.email,
@@ -81,4 +81,3 @@ export const presskit = ({
     { name: 'HorrorPen', role: 'Music' }
   ]
 });
-
