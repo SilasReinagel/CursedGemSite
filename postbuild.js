@@ -1,7 +1,41 @@
-import site from './src/static-content';
-
+const site = require('./metadata.js');
 const fs = require("fs");
 const replace = require('replace-in-file');
+
+const replaceFs = (targetFile, from, to) => {
+  try {
+    let text = fs.readFileSync(targetFile, 'utf8');
+    text = text.replace(from, to);
+    fs.writeFileSync(targetFile, text);
+  } catch(e) {
+      console.log('Error:', e.stack);
+      process.exit(-1);
+  }
+};
+
+// Twitter Card
+
+let twitterCard = "";
+twitterCard = twitterCard.concat(`\t<meta name="twitter:card" content="summary_large_image" />\n`);
+twitterCard = twitterCard.concat(`\t<meta name="twitter:creator" content="@${site.twitterUsername}" />\n`);
+twitterCard = twitterCard.concat(`\t<meta name="twitter:site" content="@${site.twitterUsername}" />\n`);
+twitterCard = twitterCard.concat(`\t<meta name="twitter:title" content="${site.name}" />\n`);
+twitterCard = twitterCard.concat(`\t<meta name="twitter:description" content="${site.siteDescription}" />\n`);
+twitterCard = twitterCard.concat(`\t<meta name="twitter:url" content="${site.url}" />\n`);
+twitterCard = twitterCard.concat(`\t<meta name="twitter:image" content="${site.siteImage}" />`);
+
+replaceFs('./public/index.html', '\t<!-- Twitter Card Slot -->', twitterCard);
+
+// Open Graph
+
+let openGraph = "";
+openGraph = openGraph.concat(`\t<meta name="og:type" content="website" />\n`);
+openGraph = openGraph.concat(`\t<meta name="og:title" content="${site.title}" />\n`);
+openGraph = openGraph.concat(`\t<meta name="og:description" content="${site.siteDescription}" />\n`);
+openGraph = openGraph.concat(`\t<meta name="og:url" content="${site.url}" />\n`);
+openGraph = openGraph.concat(`\t<meta name="og:image" content="${site.image}" />\n`);
+
+replaceFs('./public/index.html', '\t<!-- Open Graph Slot -->', openGraph);
 
 // Cache Busting
 
@@ -31,23 +65,3 @@ replace(options, (error, _) => {
   }
 });
 
-// Twitter Card
-
-let twitterCard = "";
-twitterCard = twitterCard.concat(`  <meta name="twitter:card" content="summary_large_image" />`);
-twitterCard = twitterCard.concat(`  <meta name="twitter:creator" content="@${site.social.twitterUsername}" />`);
-twitterCard = twitterCard.concat(`  <meta name="twitter:site" content="@${site.social.twitterUsername}" />`);
-twitterCard = twitterCard.concat(`  <meta name="twitter:title" content="@${site.name}" />`);
-twitterCard = twitterCard.concat(`  <meta name="twitter:description" content="@${site.siteDescription}" />`);
-twitterCard = twitterCard.concat(`  <meta name="twitter:url" content="@${site.url}" />`);
-twitterCard = twitterCard.concat(`  <meta name="twitter:image" content="@${site.siteImage}" />`);
-
-replace({
-  files: './public/index.html',
-  from: '  <!-- Twitter Card Slot -->',
-  to: twitterCard,
-  }, (error, _) => {
-    if (error) {
-      return console.error('Error:', error);
-    }
-  });
