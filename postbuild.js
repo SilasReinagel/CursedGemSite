@@ -37,6 +37,14 @@ openGraph = openGraph.concat(`\t<meta name="og:image" content="${site.image}" />
 
 replaceFs('./public/index.html', '\t<!-- Open Graph Slot -->', openGraph);
 
+// Metadata 
+
+let metaDescription = `\t<meta name="description" content="${site.description}"/>\n`;
+replaceFs('./public/index.html', '\t<!-- Meta Description Slot -->', metaDescription);
+
+let metaKeywords = `\t<meta name="keywords" content="${site.keywords}"/>\n`;
+replaceFs('./public/index.html', '\t<!-- Meta Keywords Slot -->', metaKeywords);
+
 // Cache Busting
 
 const randomString = (len, charSet) => {
