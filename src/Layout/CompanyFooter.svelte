@@ -92,7 +92,7 @@
 
   @media screen and (max-width: 360px) {
     a {
-      font-size: 1em;
+      font-size: 0.8em;
     }
   }
 </style>
