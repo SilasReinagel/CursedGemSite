@@ -30,7 +30,7 @@ replaceFs('./public/index.html', '\t<!-- Twitter Card Slot -->', twitterCard);
 
 let openGraph = "";
 openGraph = openGraph.concat(`\t<meta name="og:type" content="website" />\n`);
-openGraph = openGraph.concat(`\t<meta name="og:title" content="${site.title}" />\n`);
+openGraph = openGraph.concat(`\t<meta name="og:title" content="${site.name}" />\n`);
 openGraph = openGraph.concat(`\t<meta name="og:description" content="${site.description}" />\n`);
 openGraph = openGraph.concat(`\t<meta name="og:url" content="${site.url}" />\n`);
 openGraph = openGraph.concat(`\t<meta name="og:image" content="${site.image}" />\n`);
