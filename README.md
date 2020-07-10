@@ -16,7 +16,7 @@
 **To Build The Site For Deployment:**
 1. Browse to the root project folder
 2. Execute `npm install`
-3. Execute `npm build:prod`
+3. Execute `npm run build:prod`
 4. Deploy the contents of `public` to your web server
 
 **To Change The Site Social Cards:**
