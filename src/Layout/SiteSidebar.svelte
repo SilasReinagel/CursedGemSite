@@ -13,15 +13,32 @@
       <a href="." class="home"><h1>{company.name}</h1></a>
       <HamburgerIcon bind:open/>
     </div>
-    {#each pages.filter(p => !!p.showInMainNav) as page}
-      <a class="navlink" href={page.href}>{page.name}</a>
+    {#each pages as page}
+      <a class="navlink decor-font" href={page.href}>{page.name}</a>
     {/each}
+    <div class="row center-vh center">
+      {#if company.social.twitter}
+        <a class="navlink" href={company.social.twitter}>
+          <img src="/social/twitter-multi-color.png" alt="Twitter Icon"/>
+        </a>
+      {/if}
+      {#if company.social.reddit}
+        <a class="navlink" href={company.social.reddit}>
+          <img src="/social/reddit-multi-color.png" alt="Reddit Icon"/>
+        </a>
+      {/if}
+    </div>
   </nav>
 </aside>
 
 <style>
   h1 {
     margin: 10px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
   }
 
   .align-right {
@@ -71,7 +88,6 @@
     line-height: 22px;
     font-size: 1.6em;
     font-weight: 700;
-    font-family: Oswald,sans-serif;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     transition: all 350ms;
@@ -79,10 +95,14 @@
     padding: 6px;
   }
 
+  .navlink img {
+    width: 64px;
+  }
+
   .navlink:hover,
   .navlink:active {
-    border-top: 2px solid var(--primary-color); 
-    border-bottom: 2px solid var(--primary-color); 
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     color: var(--primary-color-hover);
   }
 </style>
