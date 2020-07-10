@@ -73,6 +73,7 @@ export const presskit = ({
   website: 'https://www.cursedgemgame.com',
   contact: site.email,
   social: site.social,
+  pdf: './download/presskit.pdf',
   logo: site.logo,
   features: gameDetails.features,
   descriptionParagraphs: gameDetails.descriptionParagraphs,
